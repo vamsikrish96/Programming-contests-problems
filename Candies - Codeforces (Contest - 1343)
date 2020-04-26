@@ -1,0 +1,41 @@
+import java.util.*;
+public class Code_forces_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner inp = new Scanner(System.in);
+		
+		int num_test = inp.nextInt();
+		
+		for(int t = 0;t<num_test;t++)
+		{	int rem = -1;
+			int ans = 0;
+			int index = 2;
+			int n = inp.nextInt();
+			
+			while(index < 31)
+			{
+				
+				int div = (1<<index) - 1;
+				
+				rem = n%div;
+				if(rem == 0)
+				{
+					ans  = n/div;
+					break;
+				}
+				index = index + 1;
+			}
+			
+			
+		System.out.println(ans);	
+			
+			
+		}
+		
+		
+
+	}
+
+}
