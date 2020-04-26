@@ -1,0 +1,86 @@
+// Balanced Array - Codeforces
+
+
+public class Balanced_array_codeforces {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner inp = new Scanner(System.in);
+
+		//int num_test = inp.nextInt();
+		int num_test = 1;
+		for(int t = 0;t<num_test;t++) {
+			int n = 5;
+			//int n = inp.nextInt();
+			//int[] ans = new int[n];
+		
+			int[] ans = new int[] {1,2,3,-1,-2};
+			if(((n/2) % 2) == 1)
+			{
+	
+				System.out.println("NO");
+			}
+			
+			else
+			{
+				
+				int div = n/2;
+				int temp = 2;
+				for(int i = 0;i<(n/2);i++)
+				{
+					ans[i] = temp;
+					//System.out.print(temp + " ");
+					temp = temp + 2;
+					
+				}
+				int index = 0;
+				for(int j = n/2;j<n;j++)
+				{
+					
+					if(j<(div + n/4))
+					{
+						ans[j] = ans[index] - 1; 
+					}
+					else
+					{
+						ans[j] = ans[index] + 1;
+					}
+					index++;
+					
+				}
+				
+				System.out.println("YES");
+				for(int d = 0;d<n;d++)
+				{
+					System.out.print(ans[d] + " ");
+				}
+				
+				System.out.println();
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
